@@ -22,7 +22,7 @@ public class GlobalAdvice {
     @ResponseBody
     @ExceptionHandler(CanNotDeleteException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
-    public String studentNotFoundHandler(CanNotDeleteException ex) {
+    public String canNotDeleteExceptionHandle(CanNotDeleteException ex) {
         return ex.getMessage();
     }
 }
